@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
+from . import mrp_document
+from . import mrp_abstract_workorder
+from . import res_config_settings
+from . import mrp_bom
+from . import mrp_routing
+from . import mrp_workcenter
+from . import mrp_production
+from . import stock_traceability
+from . import mrp_unbuild
+from . import mrp_workorder
+from . import product
+from . import res_company
+from . import stock_move
+from . import stock_picking
+from . import stock_production_lot
+from . import stock_rule
+from . import stock_scrap
+from . import stock_warehouse
+from . import stock_reject
+# from . import reject_type_codes
+from . import reject_codes
+from . import stock_rejected_type

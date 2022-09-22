@@ -333,8 +333,17 @@ body {
                   <br/>
 <!--                  <span t-field="o.communication"/>-->
               </div>
-              <div class="row2"></div>
-              <div class="row3"></div>
+              <div class="row2" t-if="o.name">
+                  <br/>
+                  <br/>
+                  <h3 t-field="o.name"/>
+              </div>
+              <div class="row3" t-if="o.communication">
+                  <br/>
+                  <br/>
+                  <h3 t-field="o.communication"/>
+
+              </div>
               <div class="row4" t-if="o.amount">
                   <br/>
                   <br/>
@@ -398,12 +407,12 @@ body {
             <div class="row22">
                 <br/>
                 <t t-foreach="o.move_line_ids" t-as="val">
-                    <h3 t-esc="val.name">
+                    <span t-esc="val.name">
 <!--                        <span t-field="val_1.name"></span>-->
 <!--&lt;!&ndash;                        <t t-if="val_1.default_code" t-as="val_2">&ndash;&gt;-->
 <!--&lt;!&ndash;                             <h3 t-esc="val_2.name"/>&ndash;&gt;-->
 <!--&lt;!&ndash;                        </t>&ndash;&gt;-->
-                    </h3>
+                    </span>
                     </t>
 <!--                default_code-->
             </div>
@@ -455,7 +464,7 @@ body {
 <!--       <t t-esc="o.amount_total" t-esc-options=/>-->
 
         <div t-if="o.word_num">
-                   <span t-field="o.word_num"/>
+                   <span t-field="o.word_num"></span><span> Only</span>
               </div>
    </div>
 
@@ -469,7 +478,7 @@ body {
        left: 0px;
        top: 0px;
        margin-left: 856px;
-       margin-top: 1270px;
+       margin-top: 1250px;
        /*background-color: white;*/
        padding: 5px;
        color: black;

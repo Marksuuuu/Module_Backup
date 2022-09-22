@@ -331,17 +331,25 @@ body {
               <div class="row1" t-if="o.communication">
                   <br/>
                   <br/>
+                  <br/>
 <!--                  <span t-field="o.communication"/>-->
               </div>
-              <div class="row2" t-if="o.name">
-                  <br/>
-                  <br/>
-                  <h3 t-field="o.name"/>
+              <div class="row2">
+                  <div style="width:60px">
+                      <br/>
+                  <h3  t-esc="o.name"></h3>
+                  </div>
+
               </div>
-              <div class="row3" t-if="o.communication">
+              <div class="row3">
+                  <div style="width:50px">
+                     <br/>
                   <br/>
                   <br/>
-                  <h3 t-field="o.communication"/>
+                  <br/>
+                  <h3 t-esc="o.communication"></h3>
+                  </div>
+
 
               </div>
               <div class="row4" t-if="o.amount">
@@ -451,7 +459,7 @@ body {
    <div style="float: left;
        position: absolute;
        height: 32px;
-       width: 582px;
+       width: 782px;
        left: 0px;
        top: 0px;
        margin-left: 282px;
@@ -460,6 +468,7 @@ body {
        /*background-color: white;*/
        padding: 5px;
        color: black;
+       font-size:16px;
        font-weight: bold;">
 <!--       <t t-esc="o.amount_total" t-esc-options=/>-->
 

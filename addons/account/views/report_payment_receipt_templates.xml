@@ -217,6 +217,7 @@
     width: 1165px;
     height: 130px;
     border: none;
+                font-size:23px;
 }
 .row23{
     width: 225px;
@@ -258,7 +259,7 @@ body {
 .title2{
      margin-top: 86px;
     margin-left: 10px;
-    width: 185px;
+    width: 260px;
     height: 25px;
 }
 .title3{
@@ -287,7 +288,7 @@ body {
         <div class="container">
           <div class="title1"></div>
           <div class="title2">
-              <span t-esc="o.payment_date.strftime('%B-%d-%Y')"/>
+              <span style="font-size:22px" t-esc="o.payment_date.strftime('%B-%d-%Y')"/>
           </div>
           <div class="title3"></div>
 <!--          <div class="title4" t-if="o.communication">-->
@@ -355,7 +356,7 @@ body {
               <div class="row4" t-if="o.amount">
                   <br/>
                   <br/>
-                   <span t-field="o.amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                   <span style="font-size:22px" t-field="o.amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
               </div>
               <div class="row5"></div>
               <div class="row6"></div>
@@ -388,7 +389,7 @@ body {
                         <br/>
                         <br/>
                         <br/>
-                      <h3 t-esc="val.account_id.name"/>
+                      <h3 style="font-size:22px" t-esc="val.account_id.name"/>
                     </t>
             </div>
                <div class="row20">
@@ -396,7 +397,7 @@ body {
                         <br/>
                         <br/>
                         <br/>
-                       <h3 t-esc="val.debit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                       <h3 style="font-size:22px" t-esc="val.debit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                     </t>
 
                </div>
@@ -405,7 +406,7 @@ body {
                         <br/>
                         <br/>
                         <br/>
-                       <h3 t-esc="val.credit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                       <h3 style="font-size:22px" t-esc="val.credit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                     </t>
 
                </div>
@@ -451,7 +452,7 @@ body {
        color: black;
        font-weight: bold;">
              <div t-if="o.partner_id">
-                  <span t-field="o.partner_id.name"/>
+                  <span style="font-size:22px" t-field="o.partner_id.name"/>
               </div>
         </div>
 
@@ -468,7 +469,7 @@ body {
        /*background-color: white;*/
        padding: 5px;
        color: black;
-       font-size:16px;
+       font-size:21px;
        font-weight: bold;">
 <!--       <t t-esc="o.amount_total" t-esc-options=/>-->
 
@@ -493,7 +494,7 @@ body {
        color: black;
        font-weight: bold;">
           <div t-if="o.amount">
-                   <span t-field="o.amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                   <span style="font-size:22px" t-field="o.amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
               </div>
       </div>
 
@@ -504,7 +505,7 @@ body {
        left: 0px;
        top: 0px;
        margin-left: 850px;
-       font-size: 20px;
+       font-size: 21px;
        letter-spacing:5px;
        text-transform:uppercase;
        margin-top: 1180px;

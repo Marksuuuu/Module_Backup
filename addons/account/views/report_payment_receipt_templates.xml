@@ -426,7 +426,7 @@ body {
        left: 0px;
        top: 0px;
        margin-left: 175px;
-       margin-top: 1235px;
+       margin-top: 1250px;
        text-transform: uppercase;
        /*background-color: white;*/
        padding: 5px;
@@ -446,7 +446,7 @@ body {
        left: 0px;
        top: 0px;
        margin-left: 282px;
-       margin-top: 1290px;
+       margin-top: 1310px;
        text-transform: uppercase;
        /*background-color: white;*/
        padding: 5px;
@@ -469,7 +469,7 @@ body {
        left: 0px;
        top: 0px;
        margin-left: 856px;
-       margin-top: 1250px;
+       margin-top: 1270px;
        /*background-color: white;*/
        padding: 5px;
        color: black;
@@ -489,7 +489,7 @@ body {
        font-size: 20px;
        letter-spacing:5px;
        text-transform:uppercase;
-       margin-top: 1170px;
+       margin-top: 1180px;
        /*background-color: white;*/
        padding: 5px;
        color: black;

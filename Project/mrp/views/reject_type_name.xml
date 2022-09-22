@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+        <record id="stock_rejected_type_form_view_tree" model="ir.ui.view">
+           <field name="name">stock_rejected_type_form</field>
+            <field name="model">stock.rejected.type</field>
+            <field name="arch" type="xml">
+                <tree string="_tree">
+                   <field name="reject_for_types"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="stock_rejected_type_form_view_form" model="ir.ui.view">
+            <field name="name">stock_rejected_type_form</field>
+            <field name="model">stock.rejected.type</field>
+            <field name="arch" type="xml">
+                <form string="_form">
+                    <sheet>
+                    <group>
+                        <group>
+                            <field name="reject_for_types"/>
+                        </group>
+                    </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_rejected_type_form_action" model="ir.actions.act_window">
+            <field name="name">Reject Type Name</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.rejected.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="domain">[]</field>
+        </record>
+
+<!--        &lt;!&ndash; This Menu Item must have a parent and an action &ndash;&gt;-->
+<!--        <menuitem id="reject_menu" name="Reject Codes" parent="menu_mrp_root" action="reject_codes_action" sequence=""/>-->
+
+        <menuitem id="stock_rejected_type" name="Rejected Type" parent="menu_mrp_configuration"
+            sequence="0" action="stock_rejected_type_form_action"/>
+
+    </data>
+</odoo>

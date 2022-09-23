@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="bill_report_template">
+            <t t-call="web.external_layout">
+                <t t-set="o" t-value="o.with_context(lang=lang)" />
+                <xpath expr="//style" position="after">
+                    <style type="text/css">
+
+            .container{
+
+                 display: -webkit-box; /* wkhtmltopdf uses this one */
+            display: -webkit-flex;
+            font-size: 15px;
+            display: flex;
+            font-family: Verdana, sans-serif;
+            -webkit-box-pack: center; /* wkhtmltopdf uses this one */
+            -webkit-justify-content: center;
+                    justify-content: center;
+                    justify-content:normal;
+                text-align: left;
+                padding: 0px;
+                font-size: 10px;
+                /*text-align: center;*/
+                text-transform: uppercase;
+
+            }
+            /*.data{
+                margin-left: 80px;
+            }*/
+
+            /*.titles{
+                height: 30px;
+                width: 110px;
+                border: none;
+            }
+            .titles-1{
+                margin-left: 70px;
+                height: 30px;
+                width: 110px;
+                border: none;
+            }*/
+            .label{
+                height: 30px;
+                width: 100px;
+                border: none;
+            }
+            .title{
+                height: 40px;
+                width: 70px;
+                border: none;
+            }
+            .title_head{
+                          font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+
+                display: inline-block;
+                margin-right: 2px;
+            }
+            .data{
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+                text-align: left;
+                width: 80px;
+                height: 40px;
+                border: none;
+            }
+            .data_output{
+                text-align: left;
+                width: 280px;
+                height: 40px;
+                border: none;
+            }
+
+            .title_head-1{
+                          font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+
+                display: inline-block;
+                margin-right: 10px;
+                margin-left: 195px;
+            }
+            .title_head-2{
+                          font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+
+                display: inline-block;
+                margin-right: 10px;
+                margin-left: 40px;
+            }
+            .data_container{
+                text-align: left;
+                width: 120px;
+                height: 40px;
+                border: none;
+            }
+            .data_container-1{
+                text-align: right;
+                width: 160px;
+                height: 40px;
+                border: none;
+            }
+            .title{
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+
+            }
+            .line{
+                display: inline-block;
+            }
+                </style>
+                </xpath>
+
+
+<div class="container">
+	<div class="title_head">
+	<div class="title"><span>APV No.:</span></div>
+	<div class="title"><span>PO-1376</span></div>
+	<div class="title"  style="border: 1px solid white;">
+		<div style="font-size:8px" t-if='o.partner_id'>
+			<span t-field='o.partner_id'/>
+		</div>
+	</div>
+	<div class="title"><span>Currency</span></div>
+	<div class="title"  style="border: 1px solid white;"><span></span></div>
+</div>
+<div class="title_head">
+	<div class="data"><span>PO-1376</span></div>
+	<div class="data"><span>Payee</span></div>
+	<div class="data"><span>Address</span></div>
+	<div class="data"><span>data</span></div>
+	<div class="data"  style="border: 1px solid white;"><span></span></div>
+</div>
+<div class="title_head">
+	<div class="data_output"  style="border: 1px solid white; "><span></span></div>
+	<div class="data_output"><span>data</span></div>
+	<div class="data_output"  style="border: 1px solid white; "><span>as</span></div>
+	<div class="data_output"><span>INV/REF# data</span></div>
+	<div class="data_output"><span>data</span></div>
+</div>
+<div class="title_head-1">
+	<div class="data_container"><span>VP DATE</span></div>
+	<div class="data_container"><span>TIN</span></div>
+	<div class="data_container"><span>TRAN/INVOICE DATE</span></div>
+	<div class="data_container"><span>DUE DATE</span></div>
+</div>
+<div class="title_head-2">
+	<div class="data_container-1"><span>06/21/22</span></div>
+	<div class="data_container-1"><span></span></div>
+	<div class="data_container-1"><span>05/25/22</span></div>
+	<div class="data_container-1"><span>06/24/22</span></div>
+</div>
+</div>
+
+<div class="container">
+	<div class="title" style="padding-right: 10px; padding-left: 10px;"><span>================================================================================================================</span></div>
+</div>
+<div class="container">
+	<div class="title" style="padding-right: 10px; padding-left: 430px; width: 200px;">
+				<span>PARTICULAR EXPLANATION</span>
+	</div>
+</div>
+<div class="container">
+	<div class="title" style="padding-right: 10px; padding-left: 10px;"><span>================================================================================================================</span></div>
+</div>
+            </t>
+        </template>
+
+
+        <template id="bill_report_container">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.partner_id.lang"/>
+                    <t t-call="account.bill_report_template" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

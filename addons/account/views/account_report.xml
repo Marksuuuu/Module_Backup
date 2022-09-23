@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <report
+            id="account_bill_report"
+            model="account.move"
+            string="Bills Report"
+            report_type="qweb-pdf"
+            name="account.bill_report_container"
+            file="account.bill_report_container"
+            attachment="(object.state == 'posted') and ((object.name or 'INV').replace('/','_')+'.pdf')"
+            print_report_name="(object._get_report_base_filename())"
+        />
+
         <!-- QWeb Reports -->
         <report
             id="account_invoices"

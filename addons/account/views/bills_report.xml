@@ -8,6 +8,7 @@
                     <style type="text/css">
 
             .container{
+                        margin-top:40px;
 font-size:13px;
                  display: -webkit-box; /* wkhtmltopdf uses this one */
             display: -webkit-flex;
@@ -107,6 +108,18 @@ font-size:13px;
             .line{
                 display: inline-block;
             }
+                        	.header{
+		border: 1px solid black;
+		text-align: center;
+		margin-left: 380px;
+		width: 280px;
+		height: 80px;
+		margin-bottom: 20px;
+		padding-left: 10px;
+		padding-top: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+	}
                 </style>
                 </xpath>
 
@@ -116,7 +129,18 @@ font-size:13px;
 <!--				VOUCHER'S PAYABLE-->
 <!--	</div>-->
 <!--</div>-->
+
+
+
 <div class="container">
+
+    	<div class="header">
+            <span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            </span>
+        </div>
+
 	<div class="title_head">
 	<div class="title"><span>APV No.:</span></div>
 	<div class="title"><span>PO-1376</span></div>
@@ -158,9 +182,7 @@ font-size:13px;
 <!--        <span t-esc="o.date.strftime('%m %d %Y')"/>-->
 <!--        </span>-->
     </div>
-    <div class="title"  style="border: 1px solid black;">
-
-    </div>
+    <div class="title"  style="border: 1px solid black;"></div>
 </div>
 <div class="title_head-1">
 	<div class="data_container"><span>VP DATE</span></div>

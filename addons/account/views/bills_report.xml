@@ -120,10 +120,10 @@ font-size:13px;
 	<div class="title_head">
 	<div class="title"><span>APV No.:</span></div>
 	<div class="title"><span>PO-1376</span></div>
-	<div class="title"  style="border: 1px solid white;">
+	<div class="title"  style="border: 1px solid black;">
 	</div>
 	<div class="title"><span>Currency</span></div>
-	<div class="title"  style="border: 1px solid white;"><span></span></div>
+	<div class="title"  style="border: 1px solid black;"><span></span></div>
 </div>
 <div class="title_head">
 	<div class="data">
@@ -157,6 +157,9 @@ font-size:13px;
 <!--        <span>Terms-->
 <!--        <span t-esc="o.date.strftime('%m %d %Y')"/>-->
 <!--        </span>-->
+    </div>
+    <div class="title"  style="border: 1px solid black;">
+
     </div>
 </div>
 <div class="title_head-1">

@@ -8,7 +8,7 @@
                     <style type="text/css">
 
             .container{
-
+font-size:13px;
                  display: -webkit-box; /* wkhtmltopdf uses this one */
             display: -webkit-flex;
             font-size: 15px;
@@ -20,7 +20,6 @@
                     justify-content:normal;
                 text-align: left;
                 padding: 0px;
-                font-size: 10px;
                 /*text-align: center;*/
                 text-transform: uppercase;
 
@@ -47,23 +46,26 @@
             }
             .title{
                 height: 40px;
-                width: 70px;
+                width: 85px;
                 border: none;
             }
             .title_head{
+                        font-size:13px;
                           font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
 
                 display: inline-block;
                 margin-right: 2px;
             }
             .data{
+                        font-size:13px;
                 font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
                 text-align: left;
-                width: 80px;
+                width: 110px;
                 height: 40px;
                 border: none;
             }
             .data_output{
+                        font-size:13px;
                 text-align: left;
                 width: 280px;
                 height: 40px;
@@ -72,24 +74,27 @@
 
             .title_head-1{
                           font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+font-size:13px;
                 display: inline-block;
                 margin-right: 10px;
-                margin-left: 160px;
+                margin-left: 120px;
             }
             .title_head-2{
                 font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
                 display: inline-block;
                 margin-right: 10px;
-                margin-left: 20px;
+                margin-left: 10px;
+                        font-size:13px;
             }
             .data_container{
                 text-align: left;
-                width: 120px;
+                width: 130px;
                 height: 40px;
                 border: none;
+                        font-size:13px;
             }
             .data_container-1{
+                        font-size:13px;
                 text-align: right;
                 width: 160px;
                 height: 40px;
@@ -139,14 +144,20 @@
 <!--			<span t-field='o.partner_id'/>-->
 <!--		</div>-->
     </div>
-	<div class="data_output"><span></span></div>
-	<div class="data_output"  style="border: 1px solid white; ">
-         <div style="font-size:8px" t-if='o.partner_id'>
+	<div class="data_output">
+        <div style="font-size:13px;" t-if='o.partner_id'>
 			<span t-field='o.partner_id'/>
 		</div>
     </div>
-	<div class="data_output"><span>INV/REF# <span t-esc="o.ref"/></span></div>
-	<div class="data_output"><span>Terms </span></div>
+	<div class="data_output"  style="border: 1px solid white; ">
+    </div>
+	<div class="data_output"><span>INV/REF#
+        <span t-esc="o.ref"/></span>
+        <br/>
+<!--        <span>Terms-->
+<!--        <span t-esc="o.date.strftime('%m %d %Y')"/>-->
+<!--        </span>-->
+    </div>
 </div>
 <div class="title_head-1">
 	<div class="data_container"><span>VP DATE</span></div>
@@ -155,7 +166,9 @@
 	<div class="data_container"><span>DUE DATE</span></div>
 </div>
 <div class="title_head-2">
-	<div class="data_container-1"><span>06/21/22</span></div>
+	<div class="data_container-1">
+         <span t-esc="o.date.strftime('%m %d %Y')"/>
+    </div>
 	<div class="data_container-1"><span></span></div>
 	<div class="data_container-1">
         <span t-esc="o.invoice_date.strftime('%m %d %Y')"/>

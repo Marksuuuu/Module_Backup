@@ -75,14 +75,13 @@
 
                 display: inline-block;
                 margin-right: 10px;
-                margin-left: 195px;
+                margin-left: 160px;
             }
             .title_head-2{
-                          font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
                 display: inline-block;
                 margin-right: 10px;
-                margin-left: 40px;
+                margin-left: 20px;
             }
             .data_container{
                 text-align: left;
@@ -106,32 +105,48 @@
                 </style>
                 </xpath>
 
-
+<!--<div class="container">-->
+<!--	<div class="title" style="padding-right: 10px; padding-left: 440px; width: 180px; text-align: center;">-->
+<!--				TEAM PACIFIC CORPORATION-->
+<!--				VOUCHER'S PAYABLE-->
+<!--	</div>-->
+<!--</div>-->
 <div class="container">
 	<div class="title_head">
 	<div class="title"><span>APV No.:</span></div>
 	<div class="title"><span>PO-1376</span></div>
 	<div class="title"  style="border: 1px solid white;">
-		<div style="font-size:8px" t-if='o.partner_id'>
-			<span t-field='o.partner_id'/>
-		</div>
 	</div>
 	<div class="title"><span>Currency</span></div>
 	<div class="title"  style="border: 1px solid white;"><span></span></div>
 </div>
 <div class="title_head">
-	<div class="data"><span>PO-1376</span></div>
+	<div class="data">
+        <div>
+            <span t-esc="o.name"/>
+        </div>
+    </div>
 	<div class="data"><span>Payee</span></div>
 	<div class="data"><span>Address</span></div>
-	<div class="data"><span>data</span></div>
+	<div class="data">
+        <span t-esc="o.journal_id.name"/>
+    </div>
 	<div class="data"  style="border: 1px solid white;"><span></span></div>
 </div>
 <div class="title_head">
-	<div class="data_output"  style="border: 1px solid white; "><span></span></div>
-	<div class="data_output"><span>data</span></div>
-	<div class="data_output"  style="border: 1px solid white; "><span>as</span></div>
-	<div class="data_output"><span>INV/REF# data</span></div>
-	<div class="data_output"><span>data</span></div>
+	<div class="data_output"  style="border: 1px solid white; ">
+<!--         <div style="font-size:10px" t-if='o.partner_id'>-->
+<!--			<span t-field='o.partner_id'/>-->
+<!--		</div>-->
+    </div>
+	<div class="data_output"><span></span></div>
+	<div class="data_output"  style="border: 1px solid white; ">
+         <div style="font-size:8px" t-if='o.partner_id'>
+			<span t-field='o.partner_id'/>
+		</div>
+    </div>
+	<div class="data_output"><span>INV/REF# <span t-esc="o.ref"/></span></div>
+	<div class="data_output"><span>Terms </span></div>
 </div>
 <div class="title_head-1">
 	<div class="data_container"><span>VP DATE</span></div>
@@ -142,22 +157,26 @@
 <div class="title_head-2">
 	<div class="data_container-1"><span>06/21/22</span></div>
 	<div class="data_container-1"><span></span></div>
-	<div class="data_container-1"><span>05/25/22</span></div>
-	<div class="data_container-1"><span>06/24/22</span></div>
+	<div class="data_container-1">
+        <span t-esc="o.invoice_date.strftime('%m %d %Y')"/>
+    </div>
+	<div class="data_container-1">
+        <span t-esc="o.invoice_date_due.strftime('%m %d %Y')"/>
+    </div>
 </div>
 </div>
 
-<div class="container">
-	<div class="title" style="padding-right: 10px; padding-left: 10px;"><span>================================================================================================================</span></div>
-</div>
-<div class="container">
-	<div class="title" style="padding-right: 10px; padding-left: 430px; width: 200px;">
-				<span>PARTICULAR EXPLANATION</span>
-	</div>
-</div>
-<div class="container">
-	<div class="title" style="padding-right: 10px; padding-left: 10px;"><span>================================================================================================================</span></div>
-</div>
+<!--<div class="container">-->
+<!--	<div class="title" style="padding-right: 10px; padding-left: 10px;"><span>================================================================================================================</span></div>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--	<div class="title" style="padding-right: 10px; padding-left: 430px; width: 200px;">-->
+<!--				<span>PARTICULAR EXPLANATION</span>-->
+<!--	</div>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--	<div class="title" style="padding-right: 10px; padding-left: 10px;"><span>================================================================================================================</span></div>-->
+<!--</div>-->
             </t>
         </template>
 

@@ -279,20 +279,20 @@ font-size:13px;
 
             <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
                 <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 40px;">
-                    <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 45px;">
+                    <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 50px;">
                                         <div t-foreach="o.line_ids.account_id" t-as="val">
                                             <span t-esc="val.code"/>
                                         </div>
                     </div>
                 </div>
-                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 45px;">
+                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 50px;">
                                         <div t-foreach="o.line_ids.account_id" t-as="val">
                                             <span t-esc="val.name"/>
                                         </div>
                 </div>
-                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 55px;">
+                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 60px;">
                                         <div t-foreach="o.line_ids" t-as="val">
-                                            <span t-esc="val.credit"/>
+                                            <span t-esc="val.debit"/>
                                         </div>
                 </div>
                 <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 45px;">

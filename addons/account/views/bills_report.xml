@@ -125,27 +125,16 @@ font-size:13px;
             .line{
                 display: inline-block;
             }
-<!--                        	.header{-->
-<!--		border: 1px solid black;-->
-<!--		text-align: center;-->
-<!--		margin-left: 380px;-->
-<!--		width: 280px;-->
-<!--		height: 80px;-->
-<!--		margin-bottom: 20px;-->
-<!--		padding-left: 10px;-->
-<!--		padding-top: 10px;-->
-<!--		padding-right: 10px;-->
-<!--		padding-bottom: 10px;-->
-<!--	}-->
+                        .data_display{
+                        margin-left:30px;
+                        margin-right:50px;
+                        text-align:center;
+                        }
+
                 </style>
                 </xpath>
 
-<!--<div class="container">-->
-<!--	<div class="title" style="padding-right: 10px; padding-left: 440px; width: 180px; text-align: center;">-->
-<!--				TEAM PACIFIC CORPORATION-->
-<!--				VOUCHER'S PAYABLE-->
-<!--	</div>-->
-<!--</div>-->
+
         <div class="container1">
             <div style="border: 1px solid white;
                 font-size:13px;
@@ -238,28 +227,29 @@ font-size:13px;
         </div>
 	        <div style="width: 280px;
 				height: 40px;
-				border: 1px solid black;
+				border: 1px solid white;
 				margin-top: 0px;
 				margin-left: 220px;">
 <!--               <div t-foreach="o.invoice_payment_term_id" t-as="val">-->
-                   <span>Terms</span><span t-esc="o.invoice_payment_term_id.name"/>
+                   <span>Terms: </span><span t-esc="o.invoice_date_due.strftime('%m %d %Y')"/>
 <!--               </div>-->
 	        </div>
 <!--                padding-left: 20px; padding-right: 20px;-->
         <span style="margin-left:0px;">In payment of the following:</span>
-        <div class="container1">
-            <div class="" style="padding-right: 10px; padding-left: 10px;">
-                <div style="margin-left:0px; width:650px; border: 1px solid white; height: 20px;">
-                            ========================================================================
+
+
+                <div class="container1" style="width: 650px; border: none;">
+                    =========================================================================================================
                 </div>
-                <div style="margin-left:0px; width:650px; border: 1px solid white; height: 20px;">
-                        <center><span>PARTICULAR EXPLANATION</span></center>
+                <div class="container1" style="width: 650px; border: none;">
+							<span style="margin-left:300px">PARTICULAR EXPLANATION</span>
                 </div>
-                <div style="margin-left:0px; width:650px; border: 1px solid white; height: 20px;">
-                            ========================================================================
+                <div class="container1" style="width: 750px; border: none;">
+                    =========================================================================================================
                 </div>
-            </div>
-        </div>
+
+
+
         <div class="container">
                 <div t-foreach="o.line_ids" t-as="val">
                             <span style="width:120px; height:30px" t-esc="val.name"> </span>
@@ -269,21 +259,52 @@ font-size:13px;
                 </div>
         </div>
 
-<!--        <div class="container">-->
-<!--            <div class="title" style="padding-right: 10px; padding-left: 10px; margin-top: 60px;">-->
-<!--                <div style="padding-left: 20px; padding-right: 20px;width:550px; border: 1px solid white; height: 20px;">-->
-<!--                    =======================================================================================================================================-->
-<!--                </div>-->
-<!--                <div style="padding-left: 20px; padding-right: 20px;width:550px; border: 1px solid white; height: 20px;">-->
-<!--                        <div><span class="data_display">asd</span>|<span class="data_display">asd</span>|<span class="data_display">asd</span>-->
 
-<!--                        </div>-->
-<!--                </div>-->
-<!--                <div style="padding-left: 20px; padding-right: 20px;width:550px; border: 1px solid white; height: 20px;">-->
-<!--                    =======================================================================================================================================-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+                <div style="margin-top:250px">
+
+
+
+               <div class="container1" style="width: 650px; border: none;">
+                    =========================================================================================================
+</div>
+<div class="container1" style="width: 650px; border: none; margin-left:100px ">
+							<span class="data_display">G/L Code</span>|
+                            <span class="data_display">Description</span>|
+                            <span class="data_display">Debit</span>|
+                            <span class="data_display">Credit</span>
+</div>
+<div class="container1" style="width: 750px; border: none;">
+                    =========================================================================================================
+</div>
+
+            <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
+                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 40px;">
+                    <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 45px;">
+                                        <div t-foreach="o.line_ids.account_id" t-as="val">
+                                            <span t-esc="val.code"/>
+                                        </div>
+                    </div>
+                </div>
+                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 45px;">
+                                        <div t-foreach="o.line_ids.account_id" t-as="val">
+                                            <span t-esc="val.name"/>
+                                        </div>
+                </div>
+                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 55px;">
+                                        <div t-foreach="o.line_ids" t-as="val">
+                                            <span t-esc="val.credit"/>
+                                        </div>
+                </div>
+                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 45px;">
+                                        <div t-foreach="o.line_ids" t-as="val">
+                                            <span t-esc="val.credit"/>
+                                        </div>
+                </div>
+
+
+            </div>
+                    </div>
+
             </t>
         </template>
 

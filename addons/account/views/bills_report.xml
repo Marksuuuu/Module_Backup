@@ -2,22 +2,39 @@
 <odoo>
     <data>
         <template id="bill_report_template">
-            <t t-call="web.external_layout">
+            <t t-call="web.internal_layout">
                 <t t-set="o" t-value="o.with_context(lang=lang)" />
                 <xpath expr="//style" position="after">
                     <style type="text/css">
 
             .container{
-                        margin-top:40px;
-font-size:13px;
+                        margin-top:10px;
+            font-size:13px;
                  display: -webkit-box; /* wkhtmltopdf uses this one */
             display: -webkit-flex;
             font-size: 15px;
             display: flex;
-            font-family: Verdana, sans-serif;
+            font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
             -webkit-box-pack: center; /* wkhtmltopdf uses this one */
             -webkit-justify-content: center;
                     justify-content: center;
+                    justify-content:normal;
+                text-align: left;
+                padding: 0px;
+                /*text-align: center;*/
+                text-transform: uppercase;
+
+            }
+                          .container1{
+            font-size:13px;
+                 display: -webkit-box; /* wkhtmltopdf uses this one */
+            display: -webkit-flex;
+            font-size: 15px;
+            display: flex;
+            font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+            -webkit-box-pack: center; /* wkhtmltopdf uses this one */
+            -webkit-justify-content: center;
+                        justify-content: center;
                     justify-content:normal;
                 text-align: left;
                 padding: 0px;
@@ -61,7 +78,7 @@ font-size:13px;
                         font-size:13px;
                 font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
                 text-align: left;
-                width: 110px;
+                width: 113px;
                 height: 40px;
                 border: none;
             }
@@ -78,7 +95,7 @@ font-size:13px;
 font-size:13px;
                 display: inline-block;
                 margin-right: 10px;
-                margin-left: 120px;
+                margin-left: 95px;
             }
             .title_head-2{
                 font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
@@ -108,18 +125,18 @@ font-size:13px;
             .line{
                 display: inline-block;
             }
-                        	.header{
-		border: 1px solid black;
-		text-align: center;
-		margin-left: 380px;
-		width: 280px;
-		height: 80px;
-		margin-bottom: 20px;
-		padding-left: 10px;
-		padding-top: 10px;
-		padding-right: 10px;
-		padding-bottom: 10px;
-	}
+<!--                        	.header{-->
+<!--		border: 1px solid black;-->
+<!--		text-align: center;-->
+<!--		margin-left: 380px;-->
+<!--		width: 280px;-->
+<!--		height: 80px;-->
+<!--		margin-bottom: 20px;-->
+<!--		padding-left: 10px;-->
+<!--		padding-top: 10px;-->
+<!--		padding-right: 10px;-->
+<!--		padding-bottom: 10px;-->
+<!--	}-->
                 </style>
                 </xpath>
 
@@ -129,94 +146,147 @@ font-size:13px;
 <!--				VOUCHER'S PAYABLE-->
 <!--	</div>-->
 <!--</div>-->
-
-
-
-<div class="container">
-
-    	<div class="header">
-            <span>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </span>
+        <div class="container1">
+            <div style="border: 1px solid white;
+                font-size:13px;
+                text-align: center;
+                margin-left: 15px;
+                width: 250px;
+                height: 80px;
+                margin-bottom: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                 justify-content: center;
+                 padding: 0px;
+                 text-transform: uppercase;">
+                <center>
+                    <span style="font-size:13px;">
+                        TEAM PACIFIC CORPORATION
+                            VOUCHER'S PAYABLE
+                    </span>
+                </center>
+            </div>
+        </div>
+        <div class="container">
+            <div class="title_head">
+            <div class="title"><span>APV No.:</span></div>
+            <div class="title"><span>PO-1376</span></div>
+            <div class="title"  style="border: 1px solid white;">
+            </div>
+            <div class="title"><span>Currency</span></div>
+        </div>
+        <div class="title_head">
+            <div class="data">
+                <div>
+                    <span t-esc="o.name"/>
+                </div>
+            </div>
+            <div class="data"><span>Payee</span></div>
+            <div class="data"><span>Address</span></div>
+            <div class="data">
+                <span t-esc="o.journal_id.name"/>
+            </div>
+<!--            <div class="data"  style="border: 1px solid white;"><span></span></div>-->
+        </div>
+        <div class="title_head">
+            <div class="data_output"  style="border: 1px solid white; ">
+        <!--         <div style="font-size:10px" t-if='o.partner_id'>-->
+        <!--			<span t-field='o.partner_id'/>-->
+        <!--		</div>-->
+            </div>
+            <div class="data_output">
+                <div style="font-size:13px;" t-if='o.partner_id'>
+                    <span t-field='o.partner_id'/>
+                </div>
+            </div>
+            <div class="data_output"  style="border: 1px solid white; ">
+            </div>
+            <div class="data_output">
+                <span>INV/REF#
+                <span t-esc="o.ref"/></span>
+                <br/>
+        <!--        <span>Terms-->
+        <!--        <span t-esc="o.date.strftime('%m %d %Y')"/>-->
+        <!--        </span>-->
+            </div>
+        </div>
+        <div class="title_head-1">
+            <div class="data_container"><span>VP DATE</span></div>
+            <div class="data_container"><span>TIN</span></div>
+            <div class="data_container"><span>TRAN/INVOICE DATE</span></div>
+            <div class="data_container"><span>DUE DATE</span></div>
+        </div>
+        <div class="title_head-2">
+            <div class="data_container-1">
+                 <span t-esc="o.date.strftime('%m %d %Y')"/>
+            </div>
+            <div class="data_container-1">
+                <span></span>
+            </div>
+            <div class="data_container-1">
+                <span t-esc="o.invoice_date.strftime('%m %d %Y')"/>
+            </div>
+            <div class="data_container-1">
+                <span t-esc="o.invoice_date_due.strftime('%m %d %Y')"/>
+            </div>
+        </div>
+        </div>
+	        <div style="width: 280px;
+				height: 40px;
+				border: 1px solid black;
+				margin-top: 0px;
+				margin-left: 220px;">
+<!--               <div t-foreach="o.invoice_payment_term_id" t-as="val">-->
+                   <span>Terms</span><span t-esc="o.invoice_payment_term_id.name"/>
+<!--               </div>-->
+	        </div>
+<!--                padding-left: 20px; padding-right: 20px;-->
+        <span style="margin-left:0px;">In payment of the following:</span>
+        <div class="container1">
+            <div class="" style="padding-right: 10px; padding-left: 10px;">
+                <div style="margin-left:0px; width:650px; border: 1px solid white; height: 20px;">
+                            ========================================================================
+                </div>
+                <div style="margin-left:0px; width:650px; border: 1px solid white; height: 20px;">
+                        <center><span>PARTICULAR EXPLANATION</span></center>
+                </div>
+                <div style="margin-left:0px; width:650px; border: 1px solid white; height: 20px;">
+                            ========================================================================
+                </div>
+            </div>
+        </div>
+        <div class="container">
+                <div t-foreach="o.line_ids" t-as="val">
+                            <span style="width:120px; height:30px" t-esc="val.name"> </span>
+                </div>
+             <div t-foreach="o.line_ids" t-as="val">
+                            <span style="width:120px; height:30px" t-esc="val.quantity"></span>
+                </div>
         </div>
 
-	<div class="title_head">
-	<div class="title"><span>APV No.:</span></div>
-	<div class="title"><span>PO-1376</span></div>
-	<div class="title"  style="border: 1px solid black;">
-	</div>
-	<div class="title"><span>Currency</span></div>
-	<div class="title"  style="border: 1px solid black;"><span></span></div>
-</div>
-<div class="title_head">
-	<div class="data">
-        <div>
-            <span t-esc="o.name"/>
-        </div>
-    </div>
-	<div class="data"><span>Payee</span></div>
-	<div class="data"><span>Address</span></div>
-	<div class="data">
-        <span t-esc="o.journal_id.name"/>
-    </div>
-	<div class="data"  style="border: 1px solid white;"><span></span></div>
-</div>
-<div class="title_head">
-	<div class="data_output"  style="border: 1px solid white; ">
-<!--         <div style="font-size:10px" t-if='o.partner_id'>-->
-<!--			<span t-field='o.partner_id'/>-->
-<!--		</div>-->
-    </div>
-	<div class="data_output">
-        <div style="font-size:13px;" t-if='o.partner_id'>
-			<span t-field='o.partner_id'/>
-		</div>
-    </div>
-	<div class="data_output"  style="border: 1px solid white; ">
-    </div>
-	<div class="data_output"><span>INV/REF#
-        <span t-esc="o.ref"/></span>
-        <br/>
-<!--        <span>Terms-->
-<!--        <span t-esc="o.date.strftime('%m %d %Y')"/>-->
-<!--        </span>-->
-    </div>
-    <div class="title"  style="border: 1px solid black;"></div>
-</div>
-<div class="title_head-1">
-	<div class="data_container"><span>VP DATE</span></div>
-	<div class="data_container"><span>TIN</span></div>
-	<div class="data_container"><span>TRAN/INVOICE DATE</span></div>
-	<div class="data_container"><span>DUE DATE</span></div>
-</div>
-<div class="title_head-2">
-	<div class="data_container-1">
-         <span t-esc="o.date.strftime('%m %d %Y')"/>
-    </div>
-	<div class="data_container-1"><span></span></div>
-	<div class="data_container-1">
-        <span t-esc="o.invoice_date.strftime('%m %d %Y')"/>
-    </div>
-	<div class="data_container-1">
-        <span t-esc="o.invoice_date_due.strftime('%m %d %Y')"/>
-    </div>
-</div>
-</div>
+<!--        <div class="container">-->
+<!--            <div class="title" style="padding-right: 10px; padding-left: 10px; margin-top: 60px;">-->
+<!--                <div style="padding-left: 20px; padding-right: 20px;width:550px; border: 1px solid white; height: 20px;">-->
+<!--                    =======================================================================================================================================-->
+<!--                </div>-->
+<!--                <div style="padding-left: 20px; padding-right: 20px;width:550px; border: 1px solid white; height: 20px;">-->
+<!--                        <div><span class="data_display">asd</span>|<span class="data_display">asd</span>|<span class="data_display">asd</span>-->
 
-<!--<div class="container">-->
-<!--	<div class="title" style="padding-right: 10px; padding-left: 10px;"><span>================================================================================================================</span></div>-->
-<!--</div>-->
-<!--<div class="container">-->
-<!--	<div class="title" style="padding-right: 10px; padding-left: 430px; width: 200px;">-->
-<!--				<span>PARTICULAR EXPLANATION</span>-->
-<!--	</div>-->
-<!--</div>-->
-<!--<div class="container">-->
-<!--	<div class="title" style="padding-right: 10px; padding-left: 10px;"><span>================================================================================================================</span></div>-->
-<!--</div>-->
+<!--                        </div>-->
+<!--                </div>-->
+<!--                <div style="padding-left: 20px; padding-right: 20px;width:550px; border: 1px solid white; height: 20px;">-->
+<!--                    =======================================================================================================================================-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
             </t>
         </template>
+
 
 
         <template id="bill_report_container">

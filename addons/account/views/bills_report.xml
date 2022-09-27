@@ -126,8 +126,8 @@ font-size:13px;
                 display: inline-block;
             }
                         .data_display{
-                        margin-left:30px;
-                        margin-right:50px;
+                        margin-left:45px;
+                        margin-right:15px;
                         text-align:center;
                         }
 
@@ -164,7 +164,7 @@ font-size:13px;
         <div class="container">
             <div class="title_head">
             <div class="title"><span>APV No.:</span></div>
-            <div class="title"><span>PO-1376</span></div>
+            <div class="title"><span></span></div>
             <div class="title"  style="border: 1px solid white;">
             </div>
             <div class="title"><span>Currency</span></div>
@@ -178,7 +178,7 @@ font-size:13px;
             <div class="data"><span>Payee</span></div>
             <div class="data"><span>Address</span></div>
             <div class="data">
-                <span t-esc="o.journal_id.name"/>
+                <span t-esc="o.currency_id.name"/>
             </div>
 <!--            <div class="data"  style="border: 1px solid white;"><span></span></div>-->
         </div>
@@ -231,7 +231,8 @@ font-size:13px;
 				margin-top: 0px;
 				margin-left: 220px;">
 <!--               <div t-foreach="o.invoice_payment_term_id" t-as="val">-->
-                   <span>Terms: </span><span t-esc="o.invoice_date_due.strftime('%m %d %Y')"/>
+                  <span>Terms: </span><span t-esc="o.invoice_payment_term_id.name"/>
+<!--                   <span>Terms: </span><span t-esc="o.invoice_date_due.strftime('%m %d %Y')"/>-->
 <!--               </div>-->
 	        </div>
 <!--                padding-left: 20px; padding-right: 20px;-->
@@ -279,32 +280,72 @@ font-size:13px;
 
             <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
                 <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 40px;">
-                    <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 50px;">
+                    <div style="width:150px; height: 250px; border: 1px solid white; margin-left: 85px;">
                                         <div t-foreach="o.line_ids.account_id" t-as="val">
                                             <span t-esc="val.code"/>
                                         </div>
                     </div>
                 </div>
-                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 50px;">
+                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 85px;">
                                         <div t-foreach="o.line_ids.account_id" t-as="val">
                                             <span t-esc="val.name"/>
                                         </div>
                 </div>
-                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 60px;">
+                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 70px;">
                                         <div t-foreach="o.line_ids" t-as="val">
                                             <span t-esc="val.debit"/>
                                         </div>
                 </div>
-                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 45px;">
+                <div style="width:150px; height: 330px; border: 1px solid white; margin-left: 5px;">
                                         <div t-foreach="o.line_ids" t-as="val">
                                             <span t-esc="val.credit"/>
                                         </div>
                 </div>
-
-
             </div>
+
+                    <div class="container1" style="width: 750px; border: none;">
+                    =========================================================================================================
                     </div>
 
+                      <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
+                <div style="width:150px;border: 1px solid white; margin-left: 40px;">
+                    <div style="width:200px;border: 1px solid white; margin-left: 30px;">
+                                       <span>ACCTS PAYABLE SECTION</span>
+                    </div>
+                </div>
+                <div style="width:150px;border: 1px solid white; margin-left: 85px;">
+                                        <span>PREPARED BY:</span>
+                </div>
+
+                <div style="width:150px;border: 1px solid white; margin-left: 70px;">
+                                        <span>REVIEWS BY:</span>
+                </div>
+                <div style="width:150px;border: 1px solid white; margin-left: 10px;">
+                                        <span>
+                                            POSTED BY:
+                                        </span>
+                </div>
+            </div>
+                       <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
+                <div style="width:150px; border: 1px solid white; margin-left: 40px;">
+                    <div style="width:150px;border: 1px solid white; margin-left: 75px;">
+                                       <span></span>
+                    </div>
+                </div>
+                <div style="width:150px; border: 1px solid white; margin-left: 70px;">
+                                        <span>________________</span>
+                </div>
+                <div style="width:150px; border: 1px solid white; margin-left: 60px;">
+                                        <span>________________</span>
+                </div>
+                <div style="width:150px; border: 1px solid white; margin-left: 5px;">
+                                        <span>________________</span>
+                </div>
+            </div>
+
+
+
+                    </div>
             </t>
         </template>
 

@@ -279,24 +279,24 @@ font-size:13px;
 </div>
 
             <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
-                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 40px;">
-                    <div style="width:150px; height: 250px; border: 1px solid white; margin-left: 85px;">
+                <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 40px;">
+                    <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 85px;">
                                         <div t-foreach="o.line_ids.account_id" t-as="val">
                                             <span t-esc="val.code"/>
                                         </div>
                     </div>
                 </div>
-                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 85px;">
+                <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 85px;">
                                         <div t-foreach="o.line_ids.account_id" t-as="val">
                                             <span t-esc="val.name"/>
                                         </div>
                 </div>
-                <div style="width:150px; height: 350px; border: 1px solid white; margin-left: 70px;">
+                <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 70px;">
                                         <div t-foreach="o.line_ids" t-as="val">
                                             <span t-esc="val.debit"/>
                                         </div>
                 </div>
-                <div style="width:150px; height: 330px; border: 1px solid white; margin-left: 5px;">
+                <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 5px;">
                                         <div t-foreach="o.line_ids" t-as="val">
                                             <span t-esc="val.credit"/>
                                         </div>

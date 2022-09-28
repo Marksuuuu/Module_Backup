@@ -23,3 +23,4 @@ from . import digest
 from . import res_users
 from . import ir_actions_report
 from . import mail_thread
+from . import custom_field_res_partner

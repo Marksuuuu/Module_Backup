@@ -248,7 +248,7 @@
                     =========================================================================================================
                 </div>
                     <!-- This is for Data in Middle Section -->
-            <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
+            <div class="container1" style="width: 320px; border:none; margin-left: 20px; margin-right: 20px;">
                 <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 40px;">
                     <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 85px;">
                         <div t-foreach="o.line_ids.account_id" t-as="val">

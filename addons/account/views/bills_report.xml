@@ -8,44 +8,39 @@
                     <style type="text/css">
 
             .container{
-                        margin-top:10px;
-            font-size:13px;
-                 display: -webkit-box; /* wkhtmltopdf uses this one */
-            display: -webkit-flex;
-            font-size: 15px;
-            display: flex;
-            font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-            -webkit-box-pack: center; /* wkhtmltopdf uses this one */
-            -webkit-justify-content: center;
-                    justify-content: center;
-                    justify-content:normal;
+                margin-top:10px;
+                font-size:13px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                font-size: 15px;
+                display: flex;
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                justify-content:normal;
                 text-align: left;
                 padding: 0px;
-                /*text-align: center;*/
                 text-transform: uppercase;
-
             }
-                          .container1{
-            font-size:13px;
-                 display: -webkit-box; /* wkhtmltopdf uses this one */
-            display: -webkit-flex;
-            font-size: 15px;
-            display: flex;
-            font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-            -webkit-box-pack: center; /* wkhtmltopdf uses this one */
-            -webkit-justify-content: center;
-                        justify-content: center;
-                    justify-content:normal;
+            .container1{
+                font-size:13px;
+                display: -webkit-box; /* wkhtmltopdf uses this one */
+                display: -webkit-flex;
+                font-size: 15px;
+                display: flex;
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                justify-content:normal;
                 text-align: left;
                 padding: 0px;
-                /*text-align: center;*/
                 text-transform: uppercase;
-
             }
             /*.data{
                 margin-left: 80px;
             }*/
-
             /*.titles{
                 height: 30px;
                 width: 110px;
@@ -68,14 +63,13 @@
                 border: none;
             }
             .title_head{
-                        font-size:13px;
-                          font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+                font-size:13px;
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
                 display: inline-block;
                 margin-right: 2px;
             }
             .data{
-                        font-size:13px;
+                font-size:13px;
                 font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
                 text-align: left;
                 width: 113px;
@@ -83,16 +77,15 @@
                 border: none;
             }
             .data_output{
-                        font-size:13px;
+                font-size:13px;
                 text-align: left;
                 width: 280px;
                 height: 40px;
                 border: none;
             }
-
             .title_head-1{
-                          font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-font-size:13px;
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+                font-size:13px;
                 display: inline-block;
                 margin-right: 10px;
                 margin-left: 95px;
@@ -112,7 +105,7 @@ font-size:13px;
                         font-size:13px;
             }
             .data_container-1{
-                        font-size:13px;
+                font-size:13px;
                 text-align: right;
                 width: 160px;
                 height: 40px;
@@ -125,16 +118,13 @@ font-size:13px;
             .line{
                 display: inline-block;
             }
-                        .data_display{
-                        margin-left:45px;
-                        margin-right:15px;
-                        text-align:center;
-                        }
-
+            .data_display{
+                margin-left:45px;
+                margin-right:15px;
+                text-align:center;
+            }
                 </style>
                 </xpath>
-
-
         <div class="container1">
             <div style="border: 1px solid white;
                 font-size:13px;
@@ -180,13 +170,9 @@ font-size:13px;
             <div class="data">
                 <span t-esc="o.currency_id.name"/>
             </div>
-<!--            <div class="data"  style="border: 1px solid white;"><span></span></div>-->
         </div>
         <div class="title_head">
             <div class="data_output"  style="border: 1px solid white; ">
-        <!--         <div style="font-size:10px" t-if='o.partner_id'>-->
-        <!--			<span t-field='o.partner_id'/>-->
-        <!--		</div>-->
             </div>
             <div class="data_output">
                 <div style="font-size:13px;" t-if='o.partner_id'>
@@ -199,9 +185,6 @@ font-size:13px;
                 <span>INV/REF#
                 <span t-esc="o.ref"/></span>
                 <br/>
-        <!--        <span>Terms-->
-        <!--        <span t-esc="o.date.strftime('%m %d %Y')"/>-->
-        <!--        </span>-->
             </div>
         </div>
         <div class="title_head-1">
@@ -230,15 +213,9 @@ font-size:13px;
 				border: 1px solid white;
 				margin-top: 0px;
 				margin-left: 220px;">
-<!--               <div t-foreach="o.invoice_payment_term_id" t-as="val">-->
                   <span>Terms: </span><span t-esc="o.invoice_payment_term_id.name"/>
-<!--                   <span>Terms: </span><span t-esc="o.invoice_date_due.strftime('%m %d %Y')"/>-->
-<!--               </div>-->
 	        </div>
-<!--                padding-left: 20px; padding-right: 20px;-->
         <span style="margin-left:0px;">In payment of the following:</span>
-
-
                 <div class="container1" style="width: 650px; border: none;">
                     =========================================================================================================
                 </div>
@@ -248,85 +225,74 @@ font-size:13px;
                 <div class="container1" style="width: 750px; border: none;">
                     =========================================================================================================
                 </div>
-
-
-
         <div class="container">
                 <div t-foreach="o.line_ids" t-as="val">
                             <span style="width:120px; height:30px" t-esc="val.name"> </span>
                 </div>
-             <div t-foreach="o.line_ids" t-as="val">
+                <div t-foreach="o.line_ids" t-as="val">
                             <span style="width:120px; height:30px" t-esc="val.quantity"></span>
                 </div>
         </div>
-
-
+                    <!-- This is for Description -->
                 <div style="margin-top:250px">
-
-
-
-               <div class="container1" style="width: 650px; border: none;">
+                <div class="container1" style="width: 650px; border: none;">
                     =========================================================================================================
-</div>
-<div class="container1" style="width: 650px; border: none; margin-left:100px ">
-							<span class="data_display">G/L Code</span>|
-                            <span class="data_display">Description</span>|
-                            <span class="data_display">Debit</span>|
-                            <span class="data_display">Credit</span>
-</div>
-<div class="container1" style="width: 750px; border: none;">
+                </div>
+            <div class="container1" style="width: 650px; border: none; margin-left:100px ">
+                <span class="data_display">G/L Code</span>|
+                <span class="data_display">Description</span>|
+                <span class="data_display">Debit</span>|
+                <span class="data_display">Credit</span>
+            </div>
+                <div class="container1" style="width: 750px; border: none;">
                     =========================================================================================================
-</div>
-
+                </div>
+                    <!-- This is for Data in Middle Section -->
             <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
                 <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 40px;">
                     <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 85px;">
-                                        <div t-foreach="o.line_ids.account_id" t-as="val">
-                                            <span t-esc="val.code"/>
-                                        </div>
+                        <div t-foreach="o.line_ids.account_id" t-as="val">
+                            <span t-esc="val.code"/>
+                        </div>
                     </div>
                 </div>
                 <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 85px;">
-                                        <div t-foreach="o.line_ids.account_id" t-as="val">
-                                            <span t-esc="val.name"/>
-                                        </div>
+                    <div t-foreach="o.line_ids.account_id" t-as="val">
+                        <span t-esc="val.name"/>
+                    </div>
                 </div>
                 <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 70px;">
-                                        <div t-foreach="o.line_ids" t-as="val">
-                                            <span t-esc="val.debit"/>
-                                        </div>
+                    <div t-foreach="o.line_ids" t-as="val">
+                        <span t-esc="val.debit"/>
+                    </div>
                 </div>
                 <div style="width:150px; height: 320px; border: 1px solid white; margin-left: 5px;">
-                                        <div t-foreach="o.line_ids" t-as="val">
-                                            <span t-esc="val.credit"/>
-                                        </div>
+                    <div t-foreach="o.line_ids" t-as="val">
+                        <span t-esc="val.credit"/>
+                    </div>
                 </div>
             </div>
-
                     <div class="container1" style="width: 750px; border: none;">
                     =========================================================================================================
                     </div>
-
-                      <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
-                <div style="width:150px;border: 1px solid white; margin-left: 40px;">
-                    <div style="width:200px;border: 1px solid white; margin-left: 30px;">
-                                       <span>ACCTS PAYABLE SECTION</span>
+            <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
+                    <div style="width:150px;border: 1px solid white; margin-left: 40px;">
+                        <div style="width:200px;border: 1px solid white; margin-left: 30px;">
+                            <span>ACCTS PAYABLE SECTION</span>
+                        </div>
                     </div>
-                </div>
-                <div style="width:150px;border: 1px solid white; margin-left: 85px;">
-                                        <span>PREPARED BY:</span>
-                </div>
+                    <div style="width:150px;border: 1px solid white; margin-left: 85px;">
+                        <span>PREPARED BY:</span>
+                    </div>
 
-                <div style="width:150px;border: 1px solid white; margin-left: 70px;">
-                                        <span>REVIEWS BY:</span>
-                </div>
-                <div style="width:150px;border: 1px solid white; margin-left: 10px;">
-                                        <span>
-                                            POSTED BY:
-                                        </span>
-                </div>
+                    <div style="width:150px;border: 1px solid white; margin-left: 70px;">
+                        <span>REVIEWS BY:</span>
+                    </div>
+                    <div style="width:150px;border: 1px solid white; margin-left: 10px;">
+                        <span>POSTED BY:</span>
+                    </div>
             </div>
-                       <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
+            <div class="container1" style="width: 750px; border:none; margin-left: 20px; margin-right: 20px;">
                 <div style="width:150px; border: 1px solid white; margin-left: 40px;">
                     <div style="width:150px;border: 1px solid white; margin-left: 75px;">
                                        <span></span>
@@ -342,13 +308,10 @@ font-size:13px;
                                         <span>________________</span>
                 </div>
             </div>
-
-
-
                     </div>
+                <!-- Div end here -->
             </t>
         </template>
-
 
 
         <template id="bill_report_container">

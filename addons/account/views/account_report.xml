@@ -12,6 +12,19 @@
             attachment="(object.state == 'posted') and ((object.name or 'INV').replace('/','_')+'.pdf')"
             print_report_name="(object._get_report_base_filename())"
         />
+
+        <!-- QWeb Reports -->
+        <!-- NAME & FILE_NAME should be the same -->
+        <report
+             id="account_vendor_bills_report"
+             model="account.move"
+             report_type="qweb-pdf"
+             string="Vendor Bills Report"
+             name="account.vendor_bills_report_container"
+             file="account.vendor_bills_report_container"
+             attachment="(object.state == 'posted') and ((object.name or 'INV').replace('/','_')+'.pdf')"
+             print_report_name="(object._get_report_base_filename())"
+        />
         <!-- Report format -->
 
 <!--        <record id="paperformat_frenchcheck" model="account.bill_report_container">-->

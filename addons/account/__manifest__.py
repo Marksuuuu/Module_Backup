@@ -66,6 +66,7 @@ You could use this simplified accounting in case you work with an (external) acc
 
 
         'views/bills_report.xml',
+        'views/vendor_bills_report.xml',
     ],
     'demo': [
         'demo/account_demo.xml',

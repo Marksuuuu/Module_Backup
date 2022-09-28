@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="vendor_bills_report_template">
+             <t t-call="web.internal_layout">
+                <t t-set="o" t-value="o.with_context(lang=lang)" />
+                <xpath expr="//style" position="after">
+                    <style type="text/css">
+		.container{
+ display: -webkit-box; /* wkhtmltopdf uses this one */
+    display: -webkit-flex;
+<!--    font-size: 15px;-->
+    display: flex;
+    -webkit-box-pack: center; /* wkhtmltopdf uses this one */
+						font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+    -webkit-justify-content: center;
+            justify-content: center;
+            justify-content:normal;
+<!--             margin-top:10px; -->
+<!--                display: -webkit-box;-->
+<!--                display: -webkit-flex;-->
+<!--                font-size: 15px;-->
+<!--                display: flex;-->
+<!--                -webkit-box-pack: center;-->
+<!--                -webkit-justify-content: center;-->
+<!--                justify-content: center;-->
+<!--                justify-content:normal;-->
+<!--                text-align: left;-->
+<!--                padding: 0px;-->
+<!--                text-transform: uppercase;-->
+		}
+                         .container1{
+                font-size:13px;
+                display: -webkit-box; /* wkhtmltopdf uses this one */
+                display: -webkit-flex;
+                font-size: 15px;
+                display: flex;
+                font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                justify-content:normal;
+                text-align: left;
+                padding: 0px;
+                text-transform: uppercase;
+            }
+		img{
+			margin-top: 15px;
+			height: 20px;
+			width: 20px;
+			margin-right: 5px;
+			filter: grayscale(100%);
+		}
+		.title{
+			font-size: 12px;
+			text-align: left;
+			margin-left: 10px;
+                        font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+		}
+		.head{
+			width: 200px;
+			height: 15px;
+			border: 1px solid black;
+                        font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+		}
+		.head_data{
+			margin-top: 20px;
+			margin-left: 120px;
+                        font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+		}
+						span{
+						margin-left:20px;
+						margin-right:0;
+						}
+	</style>
+                </xpath>
+        <div class="container">
+            <div>
+                <img style="height: 100px;
+			                width: 300px;" src="/account/static/src/img/remove.png"/>
+            </div>
+<!--            <div class="title" style="font-size: 10px; margin-left:10px;">-->
+<!--               <span style="font-size: 10px; font-weight: bold;">TEAM PACIFIC CORPORATION </span>-->
+<!--                    <br/>ELECTRONICS AVENUE, FTI SEZ-->
+<!--                    <br/> TAGUIG, METRO MANILA-->
+<!--                    <br/> PHILIPPINES 1630-->
+<!--                    <br/> TEL. NOS. 838-5005 TO 10-->
+<!--                    <br/> FAX. NOS. 838-5012 TO 13-->
+<!--                    <br/> VAT Reg TIN:004-642-765-000-->
+
+<!--            </div>-->
+        </div>
+
+                   <div class="container" style="font-size:13px; margin-top:40px;">
+
+		<div class="head_data" style="margin-left:215px">
+			<div class="head">
+				<span>
+					SOLD TO
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					IXYS, LLC
+				</span>
+			</div>
+		</div>
+
+		<div class="head_data" style="margin-left: 350px;">
+			<div class="head" style="width: 120px;">
+				<span>
+					INVOICE DATE:
+				</span>
+			</div>
+			<div class="head"  style="width: 120px;">
+				<span>
+					TERMS:
+				</span>
+			</div>
+			<div class="head"  style="width: 120px;">
+				<span>
+					Carrier Name:
+				</span>
+			</div>
+		</div>
+
+	</div>
+                 <div class="container" style="font-size:13px; margin-top:40px;">
+		<div>
+			<div class="head">
+				<span>
+					SOLD TO
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					IXYS, LLC
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					1590 Buckeye Dr.,
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					Milpitas, California95035
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					United States
+				</span>
+			</div>
+		</div>
+
+		<div class="head_data" style="margin-left:65px">
+			<div class="head">
+				<span>
+					SOLD TO
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					IXYS, LLC
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					1590 Buckeye Dr.,
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					Milpitas, California95035
+				</span>
+			</div>
+			<div class="head">
+				<span>
+					United States
+				</span>
+			</div>
+		</div>
+
+		<div class="head_data" style="margin-left: 260px;">
+			<div class="head" style="width: 120px;">
+				<span>
+					INVOICE DATE:
+				</span>
+			</div>
+			<div class="head"  style="width: 120px;">
+				<span>
+					TERMS:
+				</span>
+			</div>
+			<div class="head"  style="width: 120px;">
+				<span>
+					Carrier Name:
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					Forwarder
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					Fit/Vessel
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					MAWB no.
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					HAWB no.
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					PO no.
+				</span>
+			</div>
+		</div>
+
+		<div class="head_data" style="margin-left: 5px;">
+			<div class="head" style="width: 120px;">
+				<span>
+					INVOICE DATE:
+				</span>
+			</div>
+			<div class="head"  style="width: 120px;">
+				<span>
+					TERMS:
+				</span>
+			</div>
+			<div class="head"  style="width: 120px;">
+				<span>
+					Carrier Name:
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					Forwarder
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					Fit/Vessel
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					MAWB no.
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					HAWB no.
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+					PO no.
+				</span>
+			</div>
+		</div>
+
+	</div>
+         <span style="margin-left:0px;">In payment of the following:</span>
+                        <div class="container1" style="width: 930px; border: none;">
+                            =======================================================================================================
+                        </div>
+                        <div class="container1" style="width: 930px; border: none;">
+<!--                                    <span style="margin-left:300px">PARTICULAR EXPLANATION</span>-->
+							<span>Item</span>
+							<span>J.O./R.O. No.</span>
+							<span>Device</span>
+							<span>Description</span>
+							<span>Quantity</span>
+							<span>U/M</span>
+							<span>Unit Price</span>
+							<span>Amount</span>
+                        </div>
+                        <div class="container1" style="width: 930px; border: none;">
+                            =======================================================================================================
+                        </div>
+
+             </t>
+        </template>
+
+
+         <template id="vendor_bills_report_container">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.partner_id.lang"/>
+                    <t t-call="account.vendor_bills_report_template" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+
+
+    </data>
+</odoo>

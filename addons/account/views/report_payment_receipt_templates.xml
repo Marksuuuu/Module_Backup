@@ -118,22 +118,26 @@
     width: 114px;
     height: 240px;
     border: none;
+    font-size:10px;
 }
 .row3{
     width: 128px;
     height: 240px;
     border: none;
+    font-size:10px;
 }
 .row4{
     width: 157px;
     height: 240px;
     border: none;
+    font-size:10px;
 }
 .row5{
     font-size:15px;
     width: 87px;
     height: 240px;
     border: none;
+                 font-size:10px;
 }
 .row6{
     width: 85px;
@@ -329,34 +333,51 @@ body {
           </div>
         <div class="container1" >
               <div class="row"></div>
-              <div class="row1" t-if="o.communication">
-                  <br/>
-                  <br/>
-                  <br/>
-<!--                  <span t-field="o.communication"/>-->
-              </div>
+             <div class="row1">
+<!--                 <div style="width:50px">-->
+<!--                      <br/>-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+
+<!--                  <h3 t-esc="o.communication"></h3>-->
+<!--                 </div>-->
+                  </div>
+<!--              <div class="row1" t-foreach="o.invoice_ids" t-as="val" style="width:80px" >-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+<!--                  <h3  t-esc="val.ref"></h3>-->
+<!--              </div>-->
               <div class="row2">
-                  <div style="width:60px">
+                  <div t-foreach="o.invoice_ids" t-as="val" style="width:40px">
                       <br/>
-                  <h3  t-esc="o.name"></h3>
+                  <h3  t-esc="val.name"></h3>
                   </div>
 
               </div>
               <div class="row3">
                   <div style="width:50px">
-                     <br/>
-                  <br/>
-                  <br/>
-                  <br/>
+                     <br/><br/>
+<!--                  <br/>-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+<!--                  <br/>-->
+
                   <h3 t-esc="o.communication"></h3>
                   </div>
 
-
               </div>
-              <div class="row4" t-if="o.amount">
-                  <br/>
-                  <br/>
-                   <span style="font-size:22px" t-field="o.amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+              <div class="row4">
+                  <div t-foreach="o.invoice_ids" t-as="val">
+                    <br/>
+                    <br/>
+                      <!-- Font size 22 -->
+                   <span t-esc="val.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                  </div>
               </div>
               <div class="row5"></div>
               <div class="row6"></div>
@@ -399,7 +420,6 @@ body {
                         <br/>
                        <h3 style="font-size:22px" t-esc="val.debit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                     </t>
-
                </div>
                <div class="row21">
                        <t t-foreach="o.move_line_ids" t-as="val">

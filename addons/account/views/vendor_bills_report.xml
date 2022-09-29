@@ -220,12 +220,18 @@
 		</div>
 
 		<div class="head_data" style="margin-left: 5px;">
-			<div class="head" style="width: 120px;">
+			<div class="head" style="width: 150px;">
 				<span t-esc="o.invoice_date.strftime('%m %d %Y')"/>
 			</div>
-			<div class="head"  style="width: 120px;">
-				<div t-foreach="o.invoice_payment_term_id" t-as="val">
-					<span t-esc="val.name"/>
+			<div class="head"  style="width: 150px;">
+				<div t-if="o.invoice_payment_term_id is False">
+<!--					<span>No Data Available</span> -->
+					 No Data supplied: <t t-esc="time.strftime('%Y-%m-%d')"/>
+				</div>
+				<div t-if="o.invoice_payment_term_id is not False">
+					<div t-field="o.invoice_payment_term_id.name"/>
+<!--						<span t-esc="val.name"/>-->
+<!--					</div>-->
 				</div>
 			</div>
 			<div class="head"  style="width: 120px;">
@@ -272,7 +278,7 @@
 							<span style="margin-left:80px;">Device</span>
 							<span style="margin-left:80px;">Description</span>
 							<span style="margin-left:80px;">Quantity</span>
-							<span style="margin-left:40px;">U/M</span>
+							<span style="margin-left:40px;">UO/M</span>
 							<span style="margin-left:40px;">Unit Price</span>
 							<span style="margin-left:40px;">Amount</span>
 							</span>
@@ -283,30 +289,49 @@
 				  	<div class="container1" style="width: 930px; border: none;">
 							<span>
 								<div class="container">
-									<div style="height:90px; width:65px; border:1px solid black;">
-										<div t-foreach="o.line_ids" t-as="val">
-											<span t-esc="val.name"></span>
+									<div style="height:190px; width:65px; border:1px solid white;">
+<!--										<div t-esc="o.id" t-as="val">-->
+											<span t-esc="o.id"/>
+<!--										</div>-->
+									</div>
+									<div style="height:190px; width:90px; margin-left:3px; border:1px solid white;">
+										<div t-foreach="o.line_ids.product_id" t-as="val">
+											<span t-esc="val.name"/>
 										</div>
 									</div>
-									<div style="height:90px; width:90px; border:1px solid black;">
-										<div t-foreach="o.line_ids" t-as="val">
-											<span t-esc="val.name"></span>
+									<div style="height:190px; width:190px; margin-left:10px; border:1px solid white;">
+										<div t-foreach="o.line_ids.product_id" t-as="val">
+											<span t-esc="val.name"/>
 										</div>
 									</div>
-									<div style="height:90px; width:190px; margin-left:10px; border:1px solid black;">
-										<div t-foreach="o.line_ids" t-as="val">
-											<span t-esc="val.name"></span>
+									<div style="height:190px; width:168px; margin-left:10px; border:1px solid white;">
+										<div t-foreach="o.line_ids.product_id" t-as="val">
+											<span t-esc="val.name"/>
 										</div>
+									</div>
+									<div style="height:190px; width:92px; margin-left:3px; border:1px solid white;">
+										<div t-foreach="o.line_ids" t-as="val">
+											<span t-esc="val.quantity"/>
+										</div>
+									</div>
+									<div style="height:190px; width:52px; margin-left:4px; border:1px solid white;">
+										<div t-foreach="o.line_ids.product_uom_id" t-as="val">
+											<t t-if="val.name">
+												<span t-field="val.name"/>
+											</t>
+										</div>
+									</div>
+									<div style="height:190px; width:92px; margin-left:10px; border:1px solid white;">
+<!--										<div t-foreach="o.line_ids" t-as="val">-->
+											<span t-esc="o.amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+<!--										</div>-->
+									</div>
+									<div style="height:190px; width:92px; margin-left:10px; border:1px solid white;">
+<!--										<div t-foreach="o.line_ids.price_total" t-as="val">-->
+											<span t-esc="o.amount_total_signed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+<!--										</div>-->
 									</div>
 								</div>
-							<span style="margin-left:20px;">Item</span>
-							<span style="margin-left:30px;">J.O./R.O. No.</span>
-							<span style="margin-left:80px;">Device</span>
-							<span style="margin-left:80px;">Description</span>
-							<span style="margin-left:80px;">Quantity</span>
-							<span style="margin-left:40px;">U/M</span>
-							<span style="margin-left:40px;">Unit Price</span>
-							<span style="margin-left:40px;">Amount</span>
 							</span>
                         </div>
              </t>

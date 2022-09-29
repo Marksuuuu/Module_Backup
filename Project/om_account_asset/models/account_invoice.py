@@ -26,7 +26,7 @@ class AccountInvoice(models.Model):
 
     def action_post(self):
         result = super(AccountInvoice, self).action_post()
-        print("........", self.name)
+        # print("........", self.name)
         for inv in self:
             context = dict(self.env.context)
             context.pop('default_type', None)

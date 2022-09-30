@@ -269,7 +269,7 @@
                         <div class="container1" style="width: 1330px; border: none;">
                             =================================================================================================================================================
                         </div>
-                        <div class="container1" style="width: 1330px; border: none; text-transform:uppercase;">
+                        <div class="container1" style="width: 1330px; border: none;">
 							<span>
 							<span style="margin-left:20px;">Item</span>
 							<span style="margin-left:30px;">J.O./R.O. No.</span>
@@ -284,7 +284,7 @@
                         <div class="container1" style="width: 1330px; border: none;">
                             =================================================================================================================================================
                         </div>
-				  		<div class="container1" style="width: 930px; border: none;">
+				  		<div class="container1" style="width: 930px; border: none;  text-transform:uppercase;">
 							<span>
 								<div class="container">
 									<div style="height:170px; width:65px; border:1px solid white;">
@@ -340,7 +340,7 @@
 								<div class="container">
 									<div style="width:65px; border:1px solid white;">
 									</div>
-									<div style="width:240px; margin-left:3px; border:1px solid white;">
+									<div style="width:240px; margin-left:3px; border:1px solid white;  text-transform:uppercase;">
 
 										<span>Invoice Total</span>
 									</div>
@@ -422,27 +422,27 @@
 		<div style="margin-left:0px;">
 				<div class="head">
 				<span>
-					SOLD TO
+
 				</span>
 			</div>
 			<div class="head">
 				<div t-foreach="o.partner_id" t-as="val">
-					<span t-esc="val.name"/>
+					SHIP TO: <span t-esc="val.name"/>
 				</div>
 
 			</div>
 			<div class="head">
-				<div t-foreach="o.partner_id" t-as="val">
+				<div t-foreach="o.partner_id" t-as="val" style="margin-left:70px">
 					<span t-esc="val.street"/>
 				</div>
 			</div>
 			<div class="head">
-				<div t-foreach="o.partner_id.state_id" t-as="val">
+				<div t-foreach="o.partner_id.state_id" t-as="val" style="margin-left:70px">
 					<span t-esc="val.name"/>
 				</div>
 			</div>
 			<div class="head">
-				<div t-foreach="o.partner_id.country_id" t-as="val">
+				<div t-foreach="o.partner_id.country_id" t-as="val" style="margin-left:70px">
 					<span t-esc="val.name"/>
 				</div>
 			</div>
@@ -484,12 +484,12 @@
 			</div>
 			<div class="head"  style="width: 160px;">
 				<span>
-<!--					PAGE:-->
+					&#160;&#160;&#160;&#160;
 				</span>
 			</div>
 			<div class="head"  style="width: 160px;">
 				<span>
-
+					&#160;&#160;&#160;&#160;
 				</span>
 			</div>
 			<div class="head" style="width: 160px;">
@@ -503,12 +503,12 @@
 			</div>
 			<div class="head" style="width: 160px;">
 				<span>
-
+					Po. No.
 				</span>
 			</div>
 			<div class="head" style="width: 160px;">
 				<span>
-					Po. No.
+
 				</span>
 			</div>
 			<div class="head" style="width: 160px;">
@@ -523,17 +523,17 @@
 					<span t-field="o.name"/>
 				</div>
 			<div class="head"  style="width: 190px;">
-<!--				<span>PAGE 2</span>-->
+				<span>Page 2</span>
 				</div>
 			</div>
 			<div class="head"  style="width: 150px;">
 				<span>
-					<span t-esc="o.invoice_date.strftime('%B %d %Y')"/>
+				&#160;&#160;&#160;&#160;
 				</span>
 			</div>
-			<div class="head" style="width: 120px;">
+			<div class="head" style="width: 190px;">
 				<span>
-
+					<span t-esc="o.invoice_date.strftime('%B %d,%Y')"/>
 				</span>
 			</div>
 			<div class="head" style="width: 120px;">
@@ -562,22 +562,22 @@
                         <div class="container1" style="width: 1330px; border: none;">
                             =================================================================================================================================================
                         </div>
-                        <div class="container1" style="width: 1330px; border: none; text-transform:uppercase;">
+                        <div class="container1" style="width: 1330px; border: none;">
 							<span>
-							<span style="margin-left:20px;">Item</span>
+							<span style="margin-left:20px;">Item No.</span>
 							<span style="margin-left:30px;">J.O./R.O. No.</span>
 							<span style="margin-left:130px;">Device</span>
 							<span style="margin-left:120px;">Lot No.</span>
 							<span style="margin-left:268px;">Quantity</span>
 							<span style="margin-left:30px;"></span>
 							<span style="margin-left:30px;"></span>
-							<span style="margin-left:30px;">CASE NO.</span>
+							<span style="margin-left:30px;">Case No.</span>
 							</span>
                         </div>
                         <div class="container1" style="width: 1330px; border: none;">
                             =================================================================================================================================================
                         </div>
-				  		<div class="container1" style="width: 930px; border: none;">
+				  		<div class="container1" style="width: 930px; border: none;  text-transform:uppercase;">
 							<span>
 								<div class="container">
 									<div style="height:170px; width:65px; border:1px solid white;">
@@ -651,14 +651,14 @@
 									</div>
 									<div style="width:350px; margin-left:3px; border:1px solid white;">
 										<span>Prepared by:   ________________________</span>
-										<h6 style="margin-left:100px">Shipping</h6>
+										<h6 style="margin-left:150px">Shipping</h6>
 									</div>
 									<div style="width:360px; margin-left:50px; border:1px solid white;">
 										<span>Approved by:      ________________________</span>
-										<h6 style="margin-left:100px">Traffic Mgr.</h6>
+										<h6 style="margin-left:150px">Traffic Mgr.</h6>
 									</div>
 									<div style="width:350px; margin-left:50x; border:1px solid white;">
-										<span>Approve by:&#160;&#160;  ________________________</span>
+										<span>Approved by:&#160;&#160;  ________________________</span>
 										<h6 style="margin-left:110px">Production/Marketing Mgr.</h6>
 									</div>
 								</div>
@@ -667,11 +667,11 @@
 									</div>
 									<div style="width:350px; margin-left:3px; border:1px solid white;">
 										<span>Check by:     ________________________</span>
-										<h6 style="margin-left:100px">Security.</h6>
+										<h6 style="margin-left:150px">Security</h6>
 									</div>
 									<div style="width:360px; margin-left:50px; border:1px solid white;">
 										<span>Dispatched by: ________________________</span>
-										<h6 style="margin-left:100px">Security.</h6>
+										<h6 style="margin-left:150px">Security</h6>
 									</div>
 									<div style="width:350px; margin-left:50x; border:1px solid white;">
 										<span>Received by:   ________________________</span>

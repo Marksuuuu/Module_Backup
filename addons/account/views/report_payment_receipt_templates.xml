@@ -118,26 +118,26 @@
     width: 114px;
     height: 240px;
     border: none;
-    font-size:10px;
+    font-size:13px;
 }
 .row3{
     width: 128px;
     height: 240px;
     border: none;
-    font-size:10px;
+    font-size:13px;
 }
 .row4{
     width: 157px;
     height: 240px;
     border: none;
-    font-size:10px;
+    font-size:13px;
 }
 .row5{
     font-size:15px;
     width: 87px;
     height: 240px;
     border: none;
-                 font-size:10px;
+                 font-size:13px;
 }
 .row6{
     width: 85px;

@@ -17,7 +17,7 @@
                 justify-content:normal;
                 text-align: left;
                 padding: 0px;
-                text-transform: uppercase;
+<!--                text-transform: uppercase;-->
                          .container1{
 				font-family: Courier;
                 font-size:13px;
@@ -91,8 +91,8 @@
 		</div>
 
 		<div class="head_data" style="margin-left: 460px;">
-			<div class="head" style="width: 250px; letter-spacing:5px; ">
-				<div t-if="o.name">
+			<div class="head" style="width: 330px; letter-spacing:5px; ">
+				<div t-if="o.name" style="text-transform:uppercase;">
 					<span>Invoice No.</span><span t-field="o.name"/>
 				</div>
 			</div>
@@ -169,12 +169,12 @@
 		<div class="head_data" style="margin-left: 370px;">
 			<div class="head" style="width: 120px;">
 				<span>
-					INVOICE DATE:
+					Invoice Date:
 				</span>
 			</div>
 			<div class="head"  style="width: 120px;">
 				<span>
-					TERMS:
+					Terms:
 				</span>
 			</div>
 			<div class="head"  style="width: 120px;">
@@ -265,11 +265,11 @@
 			</div>
 		</div>
 	</div>
-         			<span style="margin-left:0px;">Country of Origin : Philippines</span>
+         			<span style="margin-left:0px; text-transform:uppercase;">Country of Origin : Philippines</span>
                         <div class="container1" style="width: 1330px; border: none;">
                             =================================================================================================================================================
                         </div>
-                        <div class="container1" style="width: 1330px; border: none;">
+                        <div class="container1" style="width: 1330px; border: none; text-transform:uppercase;">
 							<span>
 							<span style="margin-left:20px;">Item</span>
 							<span style="margin-left:30px;">J.O./R.O. No.</span>
@@ -479,7 +479,7 @@
 		<div class="head_data" style="margin-left: 370px;">
 			<div class="head" style="width: 160px;">
 				<span>
-					INVOICE REFERENCE:
+					Invoice Reference:
 				</span>
 			</div>
 			<div class="head"  style="width: 160px;">
@@ -498,7 +498,7 @@
 			</div>
 			<div class="head" style="width: 160px;">
 				<span>
-					SHIP DATE:
+					Ship Date:
 				</span>
 			</div>
 			<div class="head" style="width: 160px;">
@@ -526,9 +526,9 @@
 <!--				<span>PAGE 2</span>-->
 				</div>
 			</div>
-			<div class="head"  style="width: 120px;">
+			<div class="head"  style="width: 150px;">
 				<span>
-					<span t-esc="o.invoice_date.strftime('%m %d %Y')"/>
+					<span t-esc="o.invoice_date.strftime('%B %d %Y')"/>
 				</span>
 			</div>
 			<div class="head" style="width: 120px;">
@@ -562,7 +562,7 @@
                         <div class="container1" style="width: 1330px; border: none;">
                             =================================================================================================================================================
                         </div>
-                        <div class="container1" style="width: 1330px; border: none;">
+                        <div class="container1" style="width: 1330px; border: none; text-transform:uppercase;">
 							<span>
 							<span style="margin-left:20px;">Item</span>
 							<span style="margin-left:30px;">J.O./R.O. No.</span>
@@ -666,12 +666,12 @@
 									<div style="width:65px; border:1px solid white;">
 									</div>
 									<div style="width:350px; margin-left:3px; border:1px solid white;">
-										<span>Security :     ________________________</span>
-										<h6 style="margin-left:100px">Shipping</h6>
+										<span>Check by:     ________________________</span>
+										<h6 style="margin-left:100px">Security.</h6>
 									</div>
 									<div style="width:360px; margin-left:50px; border:1px solid white;">
-										<span>Security : ________________________</span>
-										<h6 style="margin-left:100px">Traffic Mgr.</h6>
+										<span>Dispatched by: ________________________</span>
+										<h6 style="margin-left:100px">Security.</h6>
 									</div>
 									<div style="width:350px; margin-left:50x; border:1px solid white;">
 										<span>Received by:   ________________________</span>

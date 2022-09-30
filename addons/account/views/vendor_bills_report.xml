@@ -62,12 +62,16 @@
 				span{
 					font-family: Courier;
 						}
+				h6{
+					font-size:15px;
+						 text-align: right;
+						}
 	</style>
                 </xpath>
-        <div class="container">
+				  <div class="container" style="margin-top:100px">
             <div style="margin-left: 20px">
-                <img style="height: 100px;
-			                width: 300px;" src="/account/static/src/img/remove.png"/>
+                <img style="height: 130px;
+			                width: 390px;" src="/account/static/src/img/remove.png"/>
             </div>
         </div>
 
@@ -87,20 +91,19 @@
 		</div>
 
 		<div class="head_data" style="margin-left: 460px;">
-			<div class="head" style="width: 200px; letter-spacing:5px; ">
+			<div class="head" style="width: 250px; letter-spacing:5px; ">
 				<div t-if="o.name">
-					<span t-field="o.name"/>
+					<span>Invoice No.</span><span t-field="o.name"/>
 				</div>
-
 			</div>
 			<div class="head"  style="width: 120px;">
 				<span>
-
+			Page 1
 				</span>
 			</div>
 			<div class="head"  style="width: 120px;">
 				<span>
-					PAGE: PAGE1
+
 				</span>
 			</div>
 		</div>
@@ -262,7 +265,7 @@
 			</div>
 		</div>
 	</div>
-         			<span style="margin-left:0px;">In payment of the following:</span>
+         			<span style="margin-left:0px;">Country of Origin : Philippines</span>
                         <div class="container1" style="width: 1330px; border: none;">
                             =================================================================================================================================================
                         </div>
@@ -273,7 +276,7 @@
 							<span style="margin-left:130px;">Device</span>
 							<span style="margin-left:120px;">Description</span>
 							<span style="margin-left:268px;">Quantity</span>
-							<span style="margin-left:30px;">UO/M</span>
+							<span style="margin-left:30px;">U/M</span>
 							<span style="margin-left:30px;">Unit Price</span>
 							<span style="margin-left:30px;">Amount</span>
 							</span>
@@ -373,6 +376,310 @@
 					NO ADJUSTMENTS WILL BE MADE
 					BEYOND 30 DAYS OF SHIPMENTS.
 				 </div>
+				 <br/>
+				 <br/>
+				 <br/>
+        <div class="container">
+            <div style="margin-left: 20px">
+                <img style="height: 130px;
+			                width: 390px;" src="/account/static/src/img/remove.png"/>
+            </div>
+        </div>
+
+                   <div class="container" style="font-size:13px; margin-top:40px;">
+
+		<div class="head_data" style="margin-left:362px">
+			<div class="head">
+				<span>
+
+				</span>
+			</div>
+			<div class="head">
+				<span>
+
+				</span>
+			</div>
+		</div>
+
+		<div class="head_data" style="margin-left: 460px;">
+			<div class="head" style="width: 200px; letter-spacing:5px; ">
+
+
+			</div>
+			<div class="head"  style="width: 120px;">
+				<span>
+
+				</span>
+			</div>
+			<div class="head"  style="width: 170px;">
+				<span>
+					PACKING LIST/GATEPASS
+				</span>
+			</div>
+		</div>
+	</div>
+                 <div class="container" style="font-size:13px; margin-top:40px;">
+		<div style="margin-left:0px;">
+				<div class="head">
+				<span>
+					SOLD TO
+				</span>
+			</div>
+			<div class="head">
+				<div t-foreach="o.partner_id" t-as="val">
+					<span t-esc="val.name"/>
+				</div>
+
+			</div>
+			<div class="head">
+				<div t-foreach="o.partner_id" t-as="val">
+					<span t-esc="val.street"/>
+				</div>
+			</div>
+			<div class="head">
+				<div t-foreach="o.partner_id.state_id" t-as="val">
+					<span t-esc="val.name"/>
+				</div>
+			</div>
+			<div class="head">
+				<div t-foreach="o.partner_id.country_id" t-as="val">
+					<span t-esc="val.name"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="head_data" style="margin-left:235px">
+		<div class="head">
+				<span>
+
+				</span>
+			</div>
+			<div class="head">
+				<span>
+
+				</span>
+			</div>
+			<div class="head">
+				<span>
+
+				</span>
+			</div>
+			<div class="head">
+				<span>
+
+				</span>
+			</div>
+			<div class="head">
+				<span>
+
+				</span>
+			</div>
+		</div>
+
+		<div class="head_data" style="margin-left: 370px;">
+			<div class="head" style="width: 160px;">
+				<span>
+					INVOICE REFERENCE:
+				</span>
+			</div>
+			<div class="head"  style="width: 160px;">
+				<span>
+<!--					PAGE:-->
+				</span>
+			</div>
+			<div class="head"  style="width: 160px;">
+				<span>
+
+				</span>
+			</div>
+			<div class="head" style="width: 160px;">
+				<span>
+				</span>
+			</div>
+			<div class="head" style="width: 160px;">
+				<span>
+					SHIP DATE:
+				</span>
+			</div>
+			<div class="head" style="width: 160px;">
+				<span>
+
+				</span>
+			</div>
+			<div class="head" style="width: 160px;">
+				<span>
+					Po. No.
+				</span>
+			</div>
+			<div class="head" style="width: 160px;">
+				<span>
+				</span>
+			</div>
+		</div>
+
+		<div class="head_data" style="margin-left: 5px;">
+			<div class="head" style="width: 150px;">
+				<div t-if="o.name">
+					<span t-field="o.name"/>
+				</div>
+			<div class="head"  style="width: 190px;">
+<!--				<span>PAGE 2</span>-->
+				</div>
+			</div>
+			<div class="head"  style="width: 120px;">
+				<span>
+					<span t-esc="o.invoice_date.strftime('%m %d %Y')"/>
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+
+				</span>
+			</div>
+			<div class="head" style="width: 120px;">
+				<span>
+
+				</span>
+			</div>
+		</div>
+	</div>
+<!--         			<span style="margin-left:0px;">In payment of the following:</span>-->
+                        <div class="container1" style="width: 1330px; border: none;">
+                            =================================================================================================================================================
+                        </div>
+                        <div class="container1" style="width: 1330px; border: none;">
+							<span>
+							<span style="margin-left:20px;">Item</span>
+							<span style="margin-left:30px;">J.O./R.O. No.</span>
+							<span style="margin-left:130px;">Device</span>
+							<span style="margin-left:120px;">Lot No.</span>
+							<span style="margin-left:268px;">Quantity</span>
+							<span style="margin-left:30px;"></span>
+							<span style="margin-left:30px;"></span>
+							<span style="margin-left:30px;">CASE NO.</span>
+							</span>
+                        </div>
+                        <div class="container1" style="width: 1330px; border: none;">
+                            =================================================================================================================================================
+                        </div>
+				  		<div class="container1" style="width: 930px; border: none;">
+							<span>
+								<div class="container">
+									<div style="height:170px; width:65px; border:1px solid white;">
+										<div t-foreach="o.line_ids" t-as="val">
+											<span t-esc="val.id"/>
+										</div>
+									</div>
+									<div style="height:170px; width:240px; margin-left:3px; border:1px solid white;">
+										<div t-foreach="o.line_ids.product_id" t-as="val">
+<!--											<span t-esc="val.name"/>-->
+										</div>
+									</div>
+									<div style="height:170px; width:190px; margin-left:10px; border:1px solid white;">
+										<div t-foreach="o.line_ids.product_id" t-as="val">
+											<span t-esc="val.name"/>
+										</div>
+									</div>
+									<div style="height:170px; width:368px; margin-left:10px; border:1px solid white;">
+										<div t-foreach="o.line_ids.product_id" t-as="val">
+<!--											<span t-esc="val.name"/>-->
+										</div>
+									</div>
+									<div style="height:170px; width:92px; margin-left:5px; border:1px solid white;">
+										<div t-foreach="o.line_ids" t-as="val">
+											<span t-esc="val.quantity"/>
+										</div>
+									</div>
+									<div style="height:170px; width:52px; margin-left:15px; border:1px solid white;">
+										<div t-foreach="o.line_ids.product_uom_id" t-as="val">
+											<t t-if="val.name">
+<!--												<span t-field="val.name"/>-->
+											</t>
+										</div>
+									</div>
+									<div style="height:170px; width:88px; margin-left:37px; border:1px solid white;">
+<!--										<div t-foreach="o.line_ids" t-as="val">-->
+<!--											<span t-esc="o.amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>-->
+<!--										</div>-->
+									</div>
+									<div style="height:170px; width:88px; margin-left:25px; border:1px solid white;">
+<!--										<div t-foreach="o.line_ids.price_total" t-as="val">-->
+<!--											<span t-esc="o.amount_total_signed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>-->
+<!--										</div>-->
+									</div>
+								</div>
+							</span>
+                        </div>
+				 		<div class="container1" style="border: none; margin-left:1093px;">
+                        </div>
+				 		<div class="container1" style="width: 930px; border: none;">
+							<span>
+								<div class="container">
+									<div style="width:65px; border:1px solid white;">
+									</div>
+									<div style="width:350px; margin-left:3px; border:1px solid white;">
+										<t t-set="sum_of_row" t-value="0"/>
+											<t t-foreach="o.line_ids" t-as="val">
+												<t t-set="sum_of_row" t-value="sum_of_row+val.quantity"/>
+											</t>
+										<span>TOTAL QUANTITY = </span><span t-esc="sum_of_row"/>
+									</div>
+									<div style="width:360px; margin-left:50px; border:1px solid white;">
+										<span>TOTAL CARTONS =</span>
+									</div>
+									<div style="width:350px; margin-left:50x; border:1px solid white;">
+										<span>TOTAL WEIGHT (GROSS)</span>
+									</div>
+								</div>
+								<div class="container">
+									<div style="width:65px; border:1px solid white;">
+									</div>
+									<div style="width:350px; margin-left:3px; border:1px solid white;">
+										<span>Prepared by:   ________________________</span>
+										<h6 style="margin-left:100px">Shipping</h6>
+									</div>
+									<div style="width:360px; margin-left:50px; border:1px solid white;">
+										<span>Approved by:      ________________________</span>
+										<h6 style="margin-left:100px">Traffic Mgr.</h6>
+									</div>
+									<div style="width:350px; margin-left:50x; border:1px solid white;">
+										<span>Approve by:&#160;&#160;  ________________________</span>
+										<h6 style="margin-left:110px">Production/Marketing Mgr.</h6>
+									</div>
+								</div>
+								<div class="container">
+									<div style="width:65px; border:1px solid white;">
+									</div>
+									<div style="width:350px; margin-left:3px; border:1px solid white;">
+										<span>Security :     ________________________</span>
+										<h6 style="margin-left:100px">Shipping</h6>
+									</div>
+									<div style="width:360px; margin-left:50px; border:1px solid white;">
+										<span>Security : ________________________</span>
+										<h6 style="margin-left:100px">Traffic Mgr.</h6>
+									</div>
+									<div style="width:350px; margin-left:50x; border:1px solid white;">
+										<span>Received by:   ________________________</span>
+										<h6 style="margin-left:110px">Sign Over Printed Name</h6>
+									</div>
+								</div>
+							</span>
+                        </div>
              </t>
         </template>
 

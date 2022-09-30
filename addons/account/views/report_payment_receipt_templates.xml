@@ -353,11 +353,16 @@ body {
 <!--                  <h3  t-esc="val.ref"></h3>-->
 <!--              </div>-->
               <div class="row2">
-                  <div t-foreach="o.invoice_ids" t-as="val" style="width:40px">
-                      <br/>
-                  <h3  t-esc="val.name"></h3>
+                   <t t-if="o.invoice_ids">
+                       <div t-foreach="o.invoice_ids" t-as="val" style="width:40px">
+                            <h3  t-esc="val.name"></h3>
                   </div>
-
+                  </t>
+                  <t t-elif="o.name">
+                      <div style="width:40px">
+                             <h3  t-esc="o.name"></h3>
+                    </div>
+                  </t>
               </div>
               <div class="row3">
                   <div style="width:50px">
@@ -372,12 +377,24 @@ body {
 
               </div>
               <div class="row4">
-                  <div t-foreach="o.invoice_ids" t-as="val">
-                    <br/>
-                    <br/>
+
+                  <t t-if="o.invoice_ids">
+                      <div t-foreach="o.invoice_ids" t-as="val">
+                            <span t-esc="val.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                      </div>
+<!--                         <div t-foreach=" t-as="val">-->
+<!--                            <span t-esc="val.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>-->
+<!--                        </div>-->
+                  </t>
+                   <t t-elif="o.amount">
+                        <span t-esc="o.amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                  </t>
+                  <t t-else="not o.amount">
+                      <span>No Data</span>
+                  </t>
                       <!-- Font size 22 -->
-                   <span t-esc="val.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
-                  </div>
+<!--                   <span t-esc="o.amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>-->
+<!--                  </div>-->
               </div>
               <div class="row5"></div>
               <div class="row6"></div>
